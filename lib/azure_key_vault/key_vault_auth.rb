@@ -12,6 +12,10 @@
       "Bearer #{token_resp['access_token']}"
     end
     
+    def get_headers
+      {"Content-Type" => "application/x-www-form-urlencoded"}
+    end
+    
     private 
     
     def auth_url
@@ -20,10 +24,6 @@
     
     def auth_body(client_id, client_secret)
       {"grant_type" => "client_credentials", "client_id" => client_id, "client_secret" => client_secret, "resource" => 'https://vault.azure.net'}
-    end
-    
-    def get_headers
-      {"Content-Type" => "application/x-www-form-urlencoded"}
     end
   end
 end
