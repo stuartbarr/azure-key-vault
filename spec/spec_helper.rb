@@ -1,0 +1,1 @@
+require 'azure_key_vault'
