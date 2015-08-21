@@ -4,7 +4,7 @@ require "key_vault/version"
 
 Gem::Specification.new do |s|
   s.name      = "azure-key-vault"
-  s.version   = KeyVault::VERSION.split(/[-+]/,2).first
+  s.version   = KeyVault::Version::VERSION.split(/[-+]/,2).first
   s.date      = Time.now.strftime('%Y-%m-%d')
   s.summary   = "Ruby Client for Azure Key Vault"
   s.homepage  = "http://github.com/stuartbarr/azure-key-vault"
