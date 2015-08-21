@@ -9,7 +9,7 @@ module KeyVault
       @vault_name = vault_name
       @api_version = api_version || ApiVersion::DEFAULT_API_VERSION
       @bearer_token = bearer_token
-      @vault_url = KeyVaultUrl.new(@bearer_token, @vault_name)
+      @vault_url = Url.new(@bearer_token, @vault_name)
     end
     
     def get_secret(secret_name, secret_version, api_version = @api_version)
