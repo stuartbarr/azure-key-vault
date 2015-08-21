@@ -18,7 +18,7 @@ module KeyVault
     end
       
     def create_secret(secret_name, secret_value)
-      RestClient.put(@vault_url.get_url(secret_name), :headers => @vault_url.get_headers, :body => @vault_url.get_body(secret_value))
+      RestClient.put(@vault_url.get_url(secret_name, nil, @api_version), @vault_url.get_body(secret_value), {"Content-Type" => "application/json", "Authorization" => @bearer_token})
     end
   end
 end
