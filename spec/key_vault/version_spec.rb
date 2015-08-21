@@ -4,6 +4,6 @@ describe KeyVault::Version do
   let(:version) { KeyVault::Version::VERSION }
   
   it 'gets the correct version' do 
-    expect(version).to eq '0.0.4'
+    expect(version).to eq '0.0.5'
   end
 end
