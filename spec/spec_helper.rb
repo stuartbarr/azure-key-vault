@@ -1,1 +1,1 @@
-require 'azure_key_vault'
+require 'key_vault'

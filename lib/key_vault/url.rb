@@ -1,5 +1,5 @@
-module Azure
-  class KeyVaultUrl
+module KeyVault
+  class Url
     def initialize(bearer_token, vault_name)
       @bearer_token = bearer_token
       @vault_name = vault_name

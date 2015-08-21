@@ -1,6 +1,6 @@
 # -*- mode: ruby; -*-
 $LOAD_PATH.unshift 'lib'
-require "azure_key_vault/version"
+require "key_vault/version"
 
 Gem::Specification.new do |s|
   s.name      = "azure-key-vault"

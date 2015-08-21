@@ -1,8 +1,13 @@
-module Azure
-  class KeyVault
+require 'key_vault/auth'
+require 'key_vault/url'
+require 'key_vault/api_version'
+require 'rest-client'
+
+module KeyVault
+  class Client
     def initialize(vault_name, api_version, bearer_token)
       @vault_name = vault_name
-      @api_version = api_version || KeyVaultApiVersion::DEFAULT_API_VERSION
+      @api_version = api_version || ApiVersion::DEFAULT_API_VERSION
       @bearer_token = bearer_token
       @vault_url = KeyVaultUrl.new(@bearer_token, @vault_name)
     end

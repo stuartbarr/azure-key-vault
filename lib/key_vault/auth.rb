@@ -1,5 +1,5 @@
-  module Azure
-  class KeyVaultAuth
+  module KeyVault
+  class Auth
     def initialize(tenant_id, client_id, client_secret)
       @tenant_id = tenant_id
       @client_id = client_id
